@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Carbon Emissions Dashboard</title>
+
+    <!-- Links Bootstrap und CSS: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+    <header>
+
+    <!-- Logo und Titel -->
+    <div class="d-flex align-items-center p-3">
+        <img src="img/Co2.png" alt="Logo" width="120" height="90">
+        <h1 class="ms-3 display-5 mb-0">
+            Global Carbon Emissions Dashboard
+        </h1>
+    </div>
+
+    <!-- Navbar mit globaler Navigation -->
+    <nav class="navbar navbar-expand bg-light border-top border-bottom">
+    <div class="container">
+
+    <ul class="nav nav-underline">
+        <li class="nav-item">
+            <a class="nav-link" href="start.html">Start</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="co2-daten.html">CO₂-Daten</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="ueber-uns.html">Über uns</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+        </li>
+    </ul>
+
+    <!-- Button für das lokale Seitenmenü -->  
+        <button id="menuButton"
+        class="btn btn-outline-success ms-auto"
+        type="button"
+        aria-expanded="false"
+        aria-controls="seitenMenue">
+        ☰ Menü
+        </button>
+
+    </div>
+</nav>
+
+<!-- Lokales Seitenmenü -->
+<div id="seitenMenue" class="seitenmenue">
+
+    <div class="seitenmenue-header">
+
+        <h5>Lokale Links</h5>
+
+        <button id="closeMenu" class="btn-close"></button>
+
+    </div>
+
+    <ul class="nav flex-column">
+
+        <li><a class="nav-link" href="#ueberuns">Über uns</a></li>
+        <li><a class="nav-link" href="#footer">Footer</a></li>
+
+    </ul>
+
+</div>
+
+<div id="overlay"></div>
+
+    </header>
+
+    <main>
+        <section id="ueberuns">
+
+        <h2>Über uns</h2>
+
+        <p>
+        Das Global Carbon Emissions Dashboard ist ein Projekt einer fiktiven Non-Profit-Organisation (NGO) und hat das Ziel, Informationen über CO₂-Emissionen weltweit transparent und verständlich darzustellen.
+        Nutzer:innen können die Emissionsdaten nach Ländern und Unternehmen durchsuchen, vergleichen und analysieren, um ein besseres Verständnis für die globalen Auswirkungen von CO₂-Emissionen zu entwickeln.
+
+        </p>
+
+        <p>
+        Unsere Mission ist es, das Bewusstsein der Öffentlichkeit für den Klimawandel zu stärken und Informationen über CO₂-Emissionen leicht zugänglich zu machen. 
+        Durch interaktive Tabellen, Filterfunktionen und Vergleichsmöglichkeiten können Nutzer:innen die Daten auf ihre individuellen Bedürfnisse anpassen und fundierte Entscheidungen treffen.
+        </p>
+
+        <p>
+        Wie auch schon an anderen Stellen auf dieser Webseite erwähnt, sind alle dargestellten Daten fiktiv und dienen ausschließlich der Veranschaulichung. 
+        </p>
+
+        </section>
+      
+    </main>
+
+    <!--Footer-->
+
+    <footer id="footer" class="bg-light border-top mt-5 py-4">
+
+    <div class="container text-center">
+
+        <p class="mb-2">
+            © 2026 Global Carbon Emissions Dashboard
+        </p>
+
+        <a href="impressum.html" class="me-3">Impressum</a>
+        <a href="datenschutz.html" class="me-3">Datenschutz</a>
+        <a href="kontakt.html">Kontakt</a>
+
+        <p class="text-muted mt-3 mb-0">
+            Diese Webseite wurde im Rahmen einer Fallstudie erstellt.
+            Alle dargestellten Daten sind fiktiv.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
