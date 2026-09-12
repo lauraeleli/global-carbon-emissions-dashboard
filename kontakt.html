@@ -1,0 +1,167 @@
+ <!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Carbon Emissions Dashboard</title>
+
+    <!-- Links Bootstrap und CSS: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+
+    <!-- Logo und Titel -->
+    <div class="d-flex align-items-center p-3">
+        <img src="img/Co2.png" alt="Logo" width="120" height="90">
+        <h1 class="ms-3 display-5 mb-0">
+            Global Carbon Emissions Dashboard
+        </h1>
+    </div>
+
+    <!-- Navbar mit globaler Navigation -->
+    <nav class="navbar navbar-expand bg-light border-top border-bottom">
+    <div class="container">
+
+    <ul class="nav nav-underline">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Start</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link href" href="co2-daten.html">CO₂-Daten</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="ueber-uns.html">Über uns</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="kontakt.html">Kontakt</a>
+        </li>
+    </ul>
+
+    <!-- Button für das lokale Seitenmenü -->  
+        <button id="menuButton"
+        class="btn btn-outline-success ms-auto"
+        type="button"
+        aria-expanded="false"
+        aria-controls="seitenMenue">
+        ☰ Menü
+        </button>
+
+    </div>
+</nav>
+
+<!-- Lokales Seitenmenü -->
+<div id="seitenMenue" class="seitenmenue">
+
+    <div class="seitenmenue-header">
+
+        <h5>Lokale Links</h5>
+
+        <button id="closeMenu" class="btn-close"></button>
+
+    </div>
+
+    <ul class="nav flex-column">
+
+        <li><a class="nav-link" href="#kontaktformular">Kontaktformular</a></li>
+        <li><a class="nav-link" href="#footer">Footer</a></li>
+    </ul>
+
+</div>
+
+<div id="overlay"></div>
+
+    </header>
+
+    <main>
+        <h2>Kontakt</h2>
+        <p>
+            Sie haben Fragen oder Anregungen zu unserem Projekt oder unserer Website? 
+            Wir freuen uns über Ihr Feedback!
+        </p>
+
+        <!--Kontaktinformationen-->
+
+        <ul class="list-unstyled">
+            <li><strong>E-Mail:</strong> kontakt@global-carbon.de</li>
+            <li><strong>Telefon:</strong> +49 123 456789</li>
+            <li>
+    <strong>Adresse:</strong> Musterstraße 02<br>
+    <span class="adresse-zweite-zeile">12345 Musterstadt</span>
+</li>
+        </ul>
+
+        <!-- Kontaktformular -->
+
+        <form id="kontaktFormular">
+
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            maxlength="50">
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">E-Mail</label>
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            required
+            maxlength="254">
+    </div>
+
+    <div class="mb-3">
+        <label for="nachricht" class="form-label">Nachricht</label>
+        <textarea
+            class="form-control"
+            id="nachricht"
+            rows="5"
+            maxlength="500"
+            required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Nachricht senden
+    </button>
+
+</form>
+    </main>
+
+    <!--Footer-->
+
+    <footer id="footer" class="bg-light border-top mt-5 py-4">
+
+    <div class="container text-center">
+
+        <p class="mb-2">
+            © 2026 Global Carbon Emissions Dashboard
+        </p>
+
+        <a href="impressum.html" class="me-3">Impressum</a>
+        <a href="datenschutz.html" class="me-3">Datenschutz</a>
+        <a href="kontakt.html">Kontakt</a>
+
+        <p class="text-muted mt-3 mb-0">
+            Diese Webseite wurde im Rahmen einer Fallstudie erstellt.
+            Alle dargestellten Daten sind fiktiv.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

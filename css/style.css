@@ -1,0 +1,125 @@
+.nav {
+    margin-inline-start: 110px;
+}
+
+.nav-underline .nav-link {
+    color: #174d1a !important;
+}
+
+.nav-underline .nav-link:hover {
+    color: #174d1a !important;
+}
+
+.nav-underline .nav-link.active {
+    color: #31aa39 !important;
+    border-bottom-color: #31aa39 !important;
+    font-weight: bold;
+}
+
+footer {
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #2E7D32;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-inline-start: 40px;
+}
+
+   /*Lokales Seitenmenü*/
+
+
+.seitenmenue {
+    position: fixed;
+    top: 0;
+    inset-inline-end: -320px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    transition: inset-inline-end 0.3s;
+    z-index: 1050;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, .2);
+    padding: 20px;
+}
+
+.seitenmenue.aktiv {
+    inset-inline-end: 0;
+}
+
+.seitenmenue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .35);
+    display: none;
+    z-index: 1040;
+}
+
+#overlay.aktiv {
+    display: block;
+}
+
+.seitenmenue .nav-link {
+    color: #2E7D32;
+    margin-bottom: 12px;
+}
+
+.seitenmenue .nav-link:hover {
+    color: #1B5E20;
+}
+
+#kontaktFormular {
+    max-width: 700px;
+}
+
+/* rechts-nach-links geschriebenen Schriftkultur wirddas lokale Menü auf der linken Seite eingeblendet. */
+html[dir="rtl"] .seitenmenue {
+    inset-inline-start: -320px;
+    inset-inline-end: auto;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, .2);
+}
+
+html[dir="rtl"] .seitenmenue.aktiv {
+    inset-inline-start: 0;
+}
+
+/* Responsive Anpassung für schmale Bildschirme */
+@media (max-width: 576px) {
+    .nav {
+        margin-inline-start: 0;
+    }
+
+    main {
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .seitenmenue {
+        width: min(300px, 85vw);
+    }
+}

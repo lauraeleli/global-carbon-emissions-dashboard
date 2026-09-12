@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Carbon Emissions Dashboard</title>
+
+    <!-- Links Bootstrap und CSS: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+    <header>
+
+    <!-- Logo und Titel -->
+    <div class="d-flex align-items-center p-3">
+        <img src="img/Co2.png" alt="Logo" width="120" height="90">
+        <h1 class="ms-3 display-5 mb-0">
+            Global Carbon Emissions Dashboard
+        </h1>
+    </div>
+
+    <!-- Navbar mit globaler Navigation -->
+    <nav class="navbar navbar-expand bg-light border-top border-bottom">
+    <div class="container">
+
+    <ul class="nav nav-underline">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Start</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="co2-daten.html">CO₂-Daten</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="ueber-uns.html">Über uns</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+        </li>
+    </ul>
+
+    <!-- Button für das lokale Seitenmenü -->  
+        <button id="menuButton"
+        class="btn btn-outline-success ms-auto"
+        type="button"
+        aria-expanded="false"
+        aria-controls="seitenMenue">
+        ☰ Menü
+        </button>
+
+    </div>
+</nav>
+
+<!-- Lokales Seitenmenü -->
+<div id="seitenMenue" class="seitenmenue">
+
+    <div class="seitenmenue-header">
+
+        <h5>Lokale Links</h5>
+
+        <button id="closeMenu" class="btn-close"></button>
+
+    </div>
+
+    <ul class="nav flex-column">
+
+        <li><a class="nav-link" href="#co2daten">CO₂-Daten</a></li>
+        <li><a class="nav-link" href="#footer">Footer</a></li>
+
+    </ul>
+
+</div>
+
+<div id="overlay"></div>
+
+    </header>
+
+<main>
+
+    <div class="container mt-5">
+
+        <h2 id="co2daten">CO₂-Daten</h2>
+
+        <p>
+            Bitte beachten Sie, dass die dargestellten Daten nicht real sind und ausschließlich zu Demonstrationszwecken dienen. 
+            Der gesamte Datensatz ist KI-generiert und basiert auf synthetischen Informationen, die nicht mit tatsächlichen Emissionswerten übereinstimmen. 
+            Die Daten können mithilfe der Filter- und Sortierungsfunktion gezielt durchsucht und analysiert werden.
+        </p>
+
+        <!-- Filterfunktion -->
+        <div class="row mt-4 mb-4">
+
+            <div class="col-md-6">
+                <label for="landFilter" class="form-label">
+                    Land auswählen
+                </label>
+                
+                <!-- Dropdown-Menü für die Länderauswahl -->
+                <select class="form-select" id="landFilter">
+                    <option value="">Alle Länder</option>
+                    <option>China</option>
+                    <option>USA</option>
+                    <option>Indien</option>
+                    <option>Russland</option>
+                    <option>Japan</option>
+                    <option>Deutschland</option>
+                    <option>Südkorea</option>
+                    <option>Saudi-Arabien</option>
+                    <option>Brasilien</option>
+                    <option>Kanada</option>
+                    <option>Indonesien</option>
+                    <option>Mexiko</option>
+                    <option>Australien</option>
+                    <option>Südafrika</option>
+                    <option>Frankreich</option>
+                    <option>Vereinigtes Königreich</option>
+                    <option>Italien</option>
+                    <option>Spanien</option>
+                    <option>Türkei</option>
+                    <option>Argentinien</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="unternehmenFilter" class="form-label">
+                    Unternehmen auswählen
+                </label>
+
+                <!-- Dropdown-Menü für die Unternehmen-Auswahl -->
+                <select class="form-select" id="unternehmenFilter">
+                    <option value="">Alle Unternehmen</option>
+                    <option>Sino Energy Group</option>
+                    <option>American Power Corp.</option>
+                    <option>Bharat Industries</option>
+                    <option>Volga Energy</option>
+                    <option>Nippon Manufacturing</option>
+                    <option>GreenSteel AG</option>
+                    <option>HanTech Industries</option>
+                    <option>Desert Oil Ltd.</option>
+                    <option>Amazon Mining</option>
+                    <option>Northern Resources</option>
+                    <option>Java Coal Energy</option>
+                    <option>Aztec Cement</option>
+                    <option>Outback Mining</option>
+                    <option>Cape Minerals</option>
+                    <option>Énergie France</option>
+                    <option>British Energy Ltd.</option>
+                    <option>Italia Industria</option>
+                    <option>Iberia Cement</option>
+                    <option>Anatolia Energy</option>
+                    <option>Patagonia Steel</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- Tabelle -->
+        <table class="table table-striped table-hover table-bordered" id="co2Table">
+
+                <thead class="table-success">
+    <tr>
+        <th id="sortLand" style="cursor: pointer;">
+            Land ↕
+        </th>
+
+        <th id="sortUnternehmen" style="cursor: pointer;">
+            Unternehmen ↕
+        </th>
+
+        <th>
+            CO₂-Emissionen (Mio. T/Jahr)
+        </th>
+    </tr>
+</thead>
+
+                <tbody>
+                    
+                
+                    <tr class="datenzeile"><td>China</td><td>Sino Energy Group</td><td>11.850</td></tr>
+                    <tr class="datenzeile"><td>USA</td><td>American Power Corp.</td><td>5.480</td></tr>
+                    <tr class="datenzeile"><td>Indien</td><td>Bharat Industries</td><td>3.320</td></tr>
+                    <tr class="datenzeile"><td>Russland</td><td>Volga Energy</td><td>2.180</td></tr>
+                    <tr class="datenzeile"><td>Japan</td><td>Nippon Manufacturing</td><td>1.120</td></tr>
+                    <tr class="datenzeile"><td>Deutschland</td><td>GreenSteel AG</td><td>810</td></tr>
+                    <tr class="datenzeile"><td>Südkorea</td><td>HanTech Industries</td><td>820</td></tr>
+                    <tr class="datenzeile"><td>Saudi-Arabien</td><td>Desert Oil Ltd.</td><td>690</td></tr>
+                    <tr class="datenzeile"><td>Brasilien</td><td>Amazon Mining</td><td>670</td></tr>
+                    <tr class="datenzeile"><td>Kanada</td><td>Northern Resources</td><td>620</td></tr>
+                    <tr class="datenzeile"><td>Indonesien</td><td>Java Coal Energy</td><td>590</td></tr>
+                    <tr class="datenzeile"><td>Mexiko</td><td>Aztec Cement</td><td>510</td></tr>
+                    <tr class="datenzeile"><td>Australien</td><td>Outback Mining</td><td>460</td></tr>
+                    <tr class="datenzeile"><td>Südafrika</td><td>Cape Minerals</td><td>430</td></tr>
+                    <tr class="datenzeile"><td>Frankreich</td><td>Énergie France</td><td>390</td></tr>
+                    <tr class="datenzeile"><td>Vereinigtes Königreich</td><td>British Energy Ltd.</td><td>360</td></tr>
+                    <tr class="datenzeile"><td>Italien</td><td>Italia Industria</td><td>340</td></tr>
+                    <tr class="datenzeile"><td>Spanien</td><td>Iberia Cement</td><td>290</td></tr>
+                    <tr class="datenzeile"><td>Türkei</td><td>Anatolia Energy</td><td>270</td></tr>
+                    <tr class="datenzeile"><td>Argentinien</td><td>Patagonia Steel</td><td>210</td></tr>
+
+                </tbody>
+
+            </table>
+
+        <p class="text-muted mt-3">
+            <small>
+                Hinweis: Die dargestellten Daten sind fiktiv und wurden mithilfe einer generativen KI erstellt. 
+                Sie dienen ausschließlich zu Demonstrationszwecken und spiegeln keine realen Emissionswerte wider.
+        </p>
+
+    </div>
+
+
+</main>
+    <!-- Footer -->
+
+    <footer id="footer" class="bg-light border-top mt-5 py-4">
+
+    <div class="container text-center">
+ 
+        <p class="mb-2">
+            © 2026 Global Carbon Emissions Dashboard
+        </p>
+
+        <a href="impressum.html" class="me-3">Impressum</a>
+        <a href="datenschutz.html" class="me-3">Datenschutz</a>
+        <a href="kontakt.html">Kontakt</a>
+
+        <p class="text-muted mt-3 mb-0">
+            Diese Webseite wurde im Rahmen einer Fallstudie erstellt. Alle dargestellten Daten sind fiktiv.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

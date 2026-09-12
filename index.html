@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Carbon Emissions Dashboard</title>
+
+    <!-- Links Bootstrap und CSS: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+   
+</head>
+
+<body>
+   <header>
+
+    <!-- Logo und Titel -->
+    <div class="d-flex align-items-center p-3">
+        <img src="img/Co2.png" alt="Logo" width="120" height="90">
+        <h1 class="ms-3 display-5 mb-0">
+            Global Carbon Emissions Dashboard
+        </h1>
+    </div>
+
+    <!-- Navbar mit globaler Navigation -->
+    <nav class="navbar navbar-expand bg-light border-top border-bottom">
+    <div class="container">
+
+    <ul class="nav nav-underline">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">Start</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="co2-daten.html">CO₂-Daten</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="ueber-uns.html">Über uns</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+        </li>
+    </ul>
+
+    <!-- Button für das lokale Seitenmenü -->  
+        <button id="menuButton"
+        class="btn btn-outline-success ms-auto"
+        type="button"
+        aria-expanded="false"
+        aria-controls="seitenMenue">
+        ☰ Menü
+        </button>
+
+    </div>
+</nav>
+
+<!-- Lokales Seitenmenü -->
+<div id="seitenMenue" class="seitenmenue">
+
+    <div class="seitenmenue-header">
+
+        <h5>Lokale Links</h5>
+
+        <button id="closeMenu" class="btn-close"></button>
+
+    </div>
+
+    <ul class="nav flex-column">
+
+        <li><a class="nav-link" href="#willkommen">Willkommen</a></li>
+        <li><a class="nav-link" href="#warum">Warum CO₂-Emissionen?</a></li>
+        <li><a class="nav-link" href="#projektziel">Projektziel</a></li>
+        <li><a class="nav-link" href="#footer">Footer</a></li>
+
+    </ul>
+
+</div>
+
+<div id="overlay"></div>
+
+    </header>
+
+    <main>
+
+    <!-- Startseite -->
+    <section class="container pt-5">
+
+        <!-- Begrüßung -->
+        <section id="willkommen">
+
+            <h2>Willkommen</h2>
+
+            <p>
+                Herzlich Willkommen auf dem <strong>Global Carbon Emissions Dashboard</strong>.
+                Diese Webseite wurde im Rahmen einer Fallstudie entwickelt, um mehr Transparenz über die jährlichen <strong>fiktiven, KI-generierten</strong> CO₂-Emissionen von Ländern und Unternehmen zu schaffen.
+            </p>
+
+        </section>
+
+        <section id="warum" class="mt-5">
+
+    <h2>Warum CO₂-Emissionen?</h2>
+
+<p>
+    CO₂-Emissionen gehören zu den wichtigsten Faktoren des  menschengemachten Klimawandels und tragen maßgeblich zur globalen Erwärmung bei. 
+    Sie entstehen unter anderem durch die Nutzung fossiler Energieträger wie Kohle, Erdöl und Erdgas, beispielsweise in den Bereichen Verkehr, Industrie und Energieversorgung.
+    Eine hohe Konzentration von CO₂ in der Atmosphäre verstärkt den Treibhauseffekt und trägt dadurch zur Erwärmung des globalen Klimas bei.
+
+</p>
+
+<p>
+    Eine transparente Darstellung von Emissionsdaten kann dabei helfen, Unterschiede zwischen Ländern und Unternehmen sichtbar zu machen und bewussteres Handeln zu fördern. 
+    Das Global Carbon Emissions Dashboard soll deshalb einen übersichtlichen Zugang zu den dargestellten Daten ermöglichen und Nutzer:innen für die Bedeutung von CO₂-Emissionen und nachhaltigem Handeln sensibilisieren.
+</p>
+
+<p>
+    Die Website verfolgt dabei nicht das Ziel, konkrete Unternehmen oder Länder zu bewerten. Vielmehr soll sie veranschaulichen, wie Emissionsdaten strukturiert dargestellt, gefiltert und miteinander verglichen werden können. 
+    Die auf dieser Website dargestellten Daten sind fiktiv und dienenausschließlich der Demonstration im Rahmen der Fallstudie.
+</p>
+
+</section>
+
+        <!-- Projektziel -->
+        <section id="projektziel" class="mt-5">
+
+            <h2>Projektziel</h2>
+
+            <p>
+                Als Projekt einer fiktiven Non-Profit-Organisation (NGO) verfolgt das Dashboard das Ziel, Informationen über diverse CO₂-Emissionen übersichtlich und leicht verständlich bereitzustellen.
+                Die dargestellten Daten dienen ausschließlich der Veranschaulichung und sind fiktiv.
+            </p>
+
+            <p>
+                Über den Button "Zu den CO₂-Daten" oder den Punkt "CO₂-Daten" in der Navbar, können die Nutzer:innen die Emissionsdaten einsehen. 
+                Die dargestellten CO₂-Daten können nach Ländern oder Unternehmen durchsucht, sortiert oder gefiltert werden.
+            </p>
+
+        </section>
+
+
+<section class="container pt-5">
+
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <h4>Länder</h4>
+            <p>Vergleichen Sie die CO₂-Emissionen verschiedener Länder miteinander.</p>
+        </div>
+
+        <div class="col-md-4">
+            <h4>Unternehmen</h4>
+            <p>Erhalten Sie einen Überblick über die größten/kleinsten Emittenten.</p>
+        </div>
+
+        <div class="col-md-4">
+            <h4>Datenanalyse</h4>
+            <p>Sortieren und filtern Sie die Daten nach Ihren Bedürfnissen.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Button zur Tabelle -->
+<section id="cta" class="mt-4 text-center">
+
+    <a href="co2-daten.html" class="btn btn-success">
+        Zu den CO₂-Daten
+    </a>
+
+</section>
+
+</main>
+
+<!--Footer -->
+
+    <footer id="footer" class="bg-light border-top mt-5 py-4">
+
+    <div class="container text-center">
+
+        <p class="mb-2">
+            © 2026 Global Carbon Emissions Dashboard
+        </p>
+
+        <a href="impressum.html" class="me-3">Impressum</a>
+        <a href="datenschutz.html" class="me-3">Datenschutz</a>
+        <a href="kontakt.html">Kontakt</a>
+
+        <p class="text-muted mt-3 mb-0">
+            Diese Webseite wurde im Rahmen einer Fallstudie erstellt.
+            Alle dargestellten Daten sind fiktiv.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
